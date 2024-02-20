@@ -20,6 +20,9 @@
 
     border-radius: 8px;
 }
+
+/* ---------------------------------------------------------------------------------------------------- */
+
 /* 헤더 */
 .container__header {
     display: flex;
@@ -36,6 +39,8 @@
     color: #ffffff;
 }
 
+/* ---------------------------------------------------------------------------------------------------- */
+
 /* 바디 */
 .container__body {
     display: flex;
@@ -43,15 +48,17 @@
     align-items: center;
     justify-content: flex-start;
 
-    width: calc(100% - 32px);
+    width: calc(100% - 48px);
     height: calc(100% - 52px - 60px);
 
-    padding: 16px;
+    padding: 24px;
 
     background-color: #ffffff;
 
     overflow-y: scroll;
 }
+
+/* 조회 페이지 */
 .container__body__list {
     position: relative;
 
@@ -92,6 +99,52 @@
     border-radius: 4px;
     background: linear-gradient(45deg, rgb(224, 63, 140) 0%, rgb(255, 85, 112) 100%);
 }
+
+/* 생성 페이지 */
+.container__body__info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+
+    padding-bottom: 16px;
+
+    border-bottom: 1px solid #cacaca;
+    font-weight: 500;
+}
+.container__body__inputBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    gap: 24px;
+    margin-top: 16px;
+}
+.label {
+    width: 60px;
+
+    font-size: 15px;
+    font-weight: 500;
+}
+.input {
+    flex: 1;
+    height: 24px;
+
+    padding: 10px 12px;
+
+    border-radius: 6px;
+    border: 1px solid #cacaca;
+
+    font-weight: 400;
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
 
 /* 푸터 */
 .container__footer {
