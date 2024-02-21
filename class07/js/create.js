@@ -29,27 +29,64 @@ createAtTag.addEventListener('input', (event) => {
 
 // ------------------------------------------------------------------------------------------
 
-const posts = []
+let posts = []
 
 buttonTag.addEventListener('click', () => {
-    // 위 데이터를 객체로 만들어서 로컬스토리지에 담기
-    const post = {
+    let post = {
         title,
         user,
         content,
         createAt,
     }
 
-    if (title === '' || user === '' || content === '' || createAt === '') {
-        window.alert('빈 칸을 채워주세요.')
-    } else if (title !== '' && user !== '' && content !== '' && createAt !== '') {
-        posts.push(post)
-        posts.forEach((post, index) => {
-            post.id = index + 1
-        })
-        localStorage.setItem('posts', JSON.stringify(posts))
+    // 아래 코드를 먼저 작성하여 실행시켜 본 후
 
-        window.alert('등록이 완료 되었습니다.')
-        location.href = 'index.html'
+    // if (title === '' || user === '' || content === '' || createAt === '') {
+    //     window.alert('빈 칸을 채워주세요.')
+    // } else if (title !== '' && user !== '' && content !== '' && createAt !== '') {
+    //     posts.push(post)
+    //     posts.forEach((post, index) => {
+    //         post.id = index + 1
+    //     })
+    //     localStorage.setItem('posts', JSON.stringify(posts))
+
+    //     window.alert('등록이 완료 되었습니다.')
+    //     location.href = 'index.html'
+    // }
+
+    const addedPosts = JSON.parse(localStorage.getItem('posts'))
+    console.log(addedPosts)
+
+    if (addedPosts !== null) {
+        // 로컬스토리지 조회 후 이미 posts 배열 데이터가 있으면
+        posts = [...addedPosts]
+
+        if (title === '' || user === '' || content === '' || createAt === '') {
+            window.alert('빈 칸을 채워주세요.')
+        } else if (title !== '' && user !== '' && content !== '' && createAt !== '') {
+            posts.push(post)
+            posts.forEach((post, index) => {
+                post.id = index + 1
+            })
+            localStorage.setItem('posts', JSON.stringify(posts))
+
+            window.alert('등록이 완료 되었습니다.')
+            location.href = 'index.html'
+        }
+    } else {
+        // 로컬스토리지 조회 후 이미 posts 배열 데이터가 없으면
+        // 아래 데이터를 객체로 만들어서 로컬스토리지에 담기
+        if (title === '' || user === '' || content === '' || createAt === '') {
+            window.alert('빈 칸을 채워주세요.')
+        } else if (title !== '' && user !== '' && content !== '' && createAt !== '') {
+            posts.push(post)
+            posts.forEach((post, index) => {
+                post.id = index + 1
+            })
+            localStorage.setItem('posts', JSON.stringify(posts))
+
+            window.alert('등록이 완료 되었습니다.')
+            location.href = 'index.html'
+        }
     }
 })

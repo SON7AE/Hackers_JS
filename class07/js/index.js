@@ -16,10 +16,11 @@ if (posts === null) {
     </div>`
 } else {
     posts.forEach((post, index) => {
-        bodyEl.innerHTML = `<div class="container__body__list">
-            <span class="title">${post.user}</span>
-            <span class="content">${post.content}</span>
-            <span class="createAt">${post.createAt}</span>
+        bodyEl.innerHTML += `<div class="container__body__list">
+            <span class="id">게시물 번호: NO.${post.id}</span>
+            <span class="title">제목: ${post.user}</span>
+            <span class="content">내용: ${post.content}</span>
+            <span class="createAt">작성날짜: ${post.createAt}</span>
             <button class="btn-update">상세보기</button>
         </div>`
     })

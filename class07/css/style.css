@@ -82,6 +82,9 @@
 
     padding: 16px;
 }
+.id {
+    font-weight: 500;
+}
 .title {
     font-weight: 500;
 }
