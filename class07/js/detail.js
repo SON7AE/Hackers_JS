@@ -35,3 +35,9 @@ deleteBtn.addEventListener('click', () => {
     localStorage.setItem('posts', JSON.stringify(posts))
     location.href = 'index.html'
 })
+
+// 뒤로가기
+const backBtn = document.querySelector('.container__header__button')
+backBtn.addEventListener('click', () => {
+    location.href = 'index.html'
+})

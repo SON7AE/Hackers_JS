@@ -25,6 +25,8 @@
 
 /* 헤더 */
 .container__header {
+    position: relative;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,6 +39,22 @@
 }
 .container__header__title {
     color: #ffffff;
+}
+.container__header__button {
+    position: absolute;
+    left: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    color: white;
+
+    cursor: pointer;
 }
 
 /* ---------------------------------------------------------------------------------------------------- */
