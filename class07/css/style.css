@@ -165,8 +165,11 @@
     align-items: center;
     justify-content: center;
 
-    width: 100%;
+    width: calc(100% - 32px);
     height: 60px;
+
+    padding: 0 16px;
+    gap: 16px;
 
     border-top: 1px solid #cacaca;
     border-radius: 0 0 8px 8px;
@@ -177,7 +180,7 @@
     align-items: center;
     justify-content: center;
 
-    width: 75%;
+    width: 50%;
     height: 40px;
 
     outline: none;
@@ -189,4 +192,7 @@
 
     border-radius: 8px;
     background: linear-gradient(45deg, rgb(224, 63, 140) 0%, rgb(255, 85, 112) 100%);
+}
+.container__footer__button.delete {
+    background: #706f6f;
 }
