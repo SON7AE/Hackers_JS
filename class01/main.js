@@ -1,6 +1,14 @@
+// 1-1차시
+// 자바스크립트란 무엇인가?
+// JavaScript는 웹 페이지에서 복잡한 기능을 구현할 수 있는 스크립팅 또는 프로그래밍 언어입니다.
+// 자바스크립트로 작성한 프로그램을 스크립트(script) 라고 부릅니다. 스크립트는 웹페이지의 HTML 안에 작성할 수 있는데, 웹페이지를 불러올 때 스크립트가 자동으로 실행됩니다.
+
+// 사용자는 컴퓨터에서 웹에 접근 => 서버에 최초 요청(Request) => 최초 응답(Response) 기본적인 구조를 담은 HTML이 응답으로 전달된다. => 추가 요청(CSS, JS, 이미지, 동영상 등) => 추가 응답
+// 이때 화면이 그려지는 작업을 렌더링이라고 하고, 그 렌더링이 완료된 화면을 사용자가 보고 느끼는 것입니다.
+
 // 1-3차시
 // 자바스크립트 선행
-console.log('Hello World!')
+console.log("Hello World!")
 
 // 자료형
 // 웹을 구성하는 자바스크립트 같은 경우에는 모든 것들이 데이터로 통제가 되기 때문에
@@ -16,7 +24,7 @@ console.log('Hello World!')
 
 // 1. 문자열 string (텍스트)
 // 문자열 데이터를 만드는 방법은 큰 따옴표, 작은 따옴표, 백틱(``)으로 문자를 감싸면 됩니다.
-let typeString = 'HACHKERS HRD' // 큰 따옴표 혹은 작은 따옴표 둘 다 사용해도 무방
+let typeString = "HACHKERS HRD" // 큰 따옴표 혹은 작은 따옴표 둘 다 사용해도 무방
 console.log(typeof typeString, typeString)
 
 // 2. 숫자
@@ -40,8 +48,8 @@ console.log(typeof empty, empty)
 // null의 타입은 object를 반환하는데, 이를 미루어 볼 때, null은 '객체가 없다.'는 것을 의미합니다.
 // 여기서 객체는 아래와 같다.
 let obj = {
-    userName: 'HACKERS HRD',
-    userPhone: '010-1234-5678',
+    userName: "HACKERS HRD",
+    userPhone: "010-1234-5678",
 }
 console.log(typeof obj, obj)
 // 하지만 null은 해당 타입의 유일한 멤버로 인식되며, 객체뿐만 아니라 숫자나 문자열에도 '값이 없다'는 의미로 사용될 수 있다.
@@ -60,10 +68,10 @@ console.log(obj.userEmail)
 // 객체는 복합된 값입니다. 객체는 여러가지 값을 모아서 이름을 통해 값을 저장하고 가져올 수 있게 합니다.
 // 즉, 키-벨류(key: value) 형태로 저장합니다.
 let userInfo = {
-    name: 'HACKERS HRD',
+    name: "HACKERS HRD",
     age: 30,
-    major: 'Computer Programming',
-    email: 'abc@test.com',
+    major: "Computer Programming",
+    email: "abc@test.com",
     married: false,
 }
 
@@ -78,8 +86,8 @@ console.log(typeof userInfo.married, userInfo.married)
 // 배열은 값의 순서가 있는 집합이다. 여러 데이터를 순차적으로 저장하며
 // 배열 요소는 어떤 타입이든 상관없고, 배열 하나에 여러 타입이 섞여 있어도 괜찮다.
 // 배열 요소에 객체나 다른 배열을 써도 상관없으므로 복잡한 데이터 구조를 만들 수 있다.
-let user = ['John', 'Kim', 'Lee', 'Park']
-let complex = [123, 'john', true, userInfo]
+let user = ["John", "Kim", "Lee", "Park"]
+let complex = [123, "john", true, userInfo]
 
 console.log(typeof user, user)
 console.log(typeof complex, complex)
@@ -95,7 +103,7 @@ console.log(typeof complex, complex)
 // console.log(layoutEl)
 
 // HTML 요소(Element) 1개 할당 (가장 먼저 찾아내는 딱 하나)
-let layoutEl = document.querySelector('.layout')
+let layoutEl = document.querySelector(".layout")
 
 // HTML 요소에 적용할 수 있는 메서드
 // layoutEl.addEventListener()
@@ -107,37 +115,37 @@ let layoutEl = document.querySelector('.layout')
 // layoutEl.addEventListener('click', '두 번째 자리')
 
 // 2- 핸들러(Handler, 실행할 함수)
-layoutEl.addEventListener('click', function () {
-    console.log('Click!')
+layoutEl.addEventListener("click", function () {
+    console.log("Click!")
 })
 
 // ----------------------------------------------------------------------------------------------------
 
-const boxEl = document.querySelector('.box')
+const boxEl = document.querySelector(".box")
 console.log(boxEl)
 
-boxEl.addEventListener('click', function () {
-    console.log('클릭이벤트가 발생하였습니다.')
+boxEl.addEventListener("click", function () {
+    console.log("클릭이벤트가 발생하였습니다.")
 })
 
 // 요소의 클래스 정보객체 활용
 // class 추가
-boxEl.classList.add('active')
-let isCheck = boxEl.classList.contains('active')
+boxEl.classList.add("active")
+let isCheck = boxEl.classList.contains("active")
 
 console.log(isCheck) // true
 
 // 요소의 클래스 정보객체 활용
 // class 제거
-boxEl.classList.remove('active')
-isCheck = boxEl.classList.contains('active')
+boxEl.classList.remove("active")
+isCheck = boxEl.classList.contains("active")
 
 console.log(isCheck) // false
 
 // ----------------------------------------------------------------------------------------------------
 
 // HTML 요소(Elemnt) 모두 찾기
-const boxEls = document.querySelectorAll('.box')
+const boxEls = document.querySelectorAll(".box")
 console.log(boxEls)
 
 // 찾은 요소들 반복해서 함수 실행
@@ -160,5 +168,5 @@ boxEls.forEach(function (boxEl, index) {
 console.log(boxEl.textContent)
 
 // Setter, 값을 지정하는 용도
-boxEl.textContent = 'HACKERS HRD'
+boxEl.textContent = "HACKERS HRD"
 console.log(boxEl.textContent)
