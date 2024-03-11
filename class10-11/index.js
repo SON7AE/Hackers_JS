@@ -16,17 +16,19 @@ searchInput.addEventListener('input', (event) => {
     searchValue = event.target.value
 })
 searchBtn.addEventListener('click', () => {
+    console.log(searchValue)
     getData(searchValue)
 })
 
 // ----------------------------------------------------------------------------------------------------
 
 async function getData(inputValue) {
+    dataBoxEl.innerHTML = '' // 이전 데이터를 비어주고 재렌더링 효과
     // call unsplash api
     try {
         const res = await axios.get(`${API_URL}?query=${inputValue}&client_id=${API_KEY}&page=${pageValue}&per_page=${PER_PAGE}`)
 
-        console.log(res)
+        console.log(res.data.results[0])
         res.data.results.forEach((image) => {
             dataBoxEl.innerHTML += `<swiper-slide>
                 <div class="album">
