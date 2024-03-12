@@ -41,6 +41,7 @@ console.log(values)
 // 3. toString
 // toString() 메서드에는 인자가 없습니다.
 // toString() 메서드는 호출한 객체의 값을 나타내는 문자열을 반환한다.
+
 let point = {
     x: 1,
     y: 2,
