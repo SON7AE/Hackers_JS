@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: black;
+}
+
+/* 카운트다운 UI */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 80%;
+    padding: 24px;
+
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* 왼쪽 레이아웃 */
+.container__infoBox {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+.container__infoBox__title {
+    font-size: 22px;
+    font-weight: 900;
+}
+.container__infoBox__desc {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* 오른쪽 레이아웃 */
+.container__countDownBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container__countDownBox__countDown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.layout {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+.layout__text {
+    font-weight: 700;
+    font-size: 20px;
+
+    margin: 0 4px;
+}
+.layout__time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 64px;
+    min-height: 64px;
+
+    border-radius: 10px;
+    background-color: black;
+
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px 24px;
+    margin-left: 64px;
+
+    outline: none;
+    border: none;
+    background-color: #ffc738;
+    border-radius: 10px;
+
+    font-weight: 700;
+    font-size: 18px;
+
+    cursor: pointer;
+}
