@@ -1,21 +1,21 @@
 // API 호출에 필요한 정보
-const API_URL = 'https://api.unsplash.com/search/photos'
-const API_KEY = 'mXSaXElt5u9C4xAlm4bVyaiywj9ZRoElzokF0a9_HAU'
+const API_URL = "https://api.unsplash.com/search/photos"
+const API_KEY = "mXSaXElt5u9C4xAlm4bVyaiywj9ZRoElzokF0a9_HAU"
 const PER_PAGE = 50
 
-let searchValue = 'Korea'
+let searchValue = "Korea"
 let pageValue = 1
 
 // ----------------------------------------------------------------------------------------------------
 
-const dataBoxEl = document.querySelector('.mySwiper')
-const searchInput = document.querySelector('.input')
-const searchBtn = document.querySelector('.button')
+const dataBoxEl = document.querySelector(".mySwiper")
+const searchInput = document.querySelector(".input")
+const searchBtn = document.querySelector(".button")
 
-searchInput.addEventListener('input', (event) => {
+searchInput.addEventListener("input", (event) => {
     searchValue = event.target.value
 })
-searchBtn.addEventListener('click', () => {
+searchBtn.addEventListener("click", () => {
     console.log(searchValue)
     getData(searchValue)
 })
@@ -23,7 +23,7 @@ searchBtn.addEventListener('click', () => {
 // ----------------------------------------------------------------------------------------------------
 
 async function getData(inputValue) {
-    dataBoxEl.innerHTML = '' // 이전 데이터를 비어주고 재렌더링 효과
+    dataBoxEl.innerHTML = "" // 이전 데이터를 비어주고 재렌더링 효과
     // call unsplash api
     try {
         const res = await axios.get(`${API_URL}?query=${inputValue}&client_id=${API_KEY}&page=${pageValue}&per_page=${PER_PAGE}`)
@@ -40,11 +40,11 @@ async function getData(inputValue) {
                         </div>
                         <div class="album__infoBox__row">
                             <span class="label">업로드</span>
-                            <span class="value">${dayjs(image.created_at).format('YYYY-MM-DD')}</span>
+                            <span class="value">${dayjs(image.created_at).format("YYYY-MM-DD")}</span>
                         </div>
                         <div class="album__infoBox__row">
                             <span class="label">마지막 업데이트</span>
-                            <span class="value">${dayjs(image.updated_at).format('YYYY-MM-DD')}</span>
+                            <span class="value">${dayjs(image.updated_at).format("YYYY-MM-DD")}</span>
                         </div>
                         <div class="album__infoBox__row">
                             <span class="label">좋아요</span>
@@ -65,4 +65,4 @@ async function getData(inputValue) {
     }
 }
 
-getData('Korea')
+getData("Korea")
