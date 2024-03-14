@@ -3,6 +3,7 @@ const targetDate = new Date("2024-03-30 23:59:59")
 
 let endTime = new Date(targetDate).getTime() // getTime() 메서드는 표준시에 따라 지정된 날짜의 시간에 해당하는 숫자 값을 반환
 let period = endTime - new Date().getTime() // 타깃 날짜에서 오늘 날짜를 빼주어 카운트다운의 기간을 설정
+// 카운트다운 UI에 들어갈 데이터
 let days = ""
 let hours = ""
 let minutes = ""
