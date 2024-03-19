@@ -48,12 +48,11 @@
     outline: none;
 
     width: 100%;
-
-    &::placeholder {
-        color: #9c9c9b;
-        font-size: 14px;
-        font-weight: 400;
-    }
+}
+.input::placeholder {
+    color: #9c9c9b;
+    font-size: 14px;
+    font-weight: 400;
 }
 .button {
     display: flex;
