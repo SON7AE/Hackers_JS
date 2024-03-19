@@ -12,7 +12,7 @@ createBtn.addEventListener('click', () => {
 const posts = JSON.parse(localStorage.getItem('posts'))
 const postIds = []
 
-if (posts === null) {
+if (posts.length === 0) {
     bodyEl.innerHTML = `<div class="container__body__noData">
         <span>등록된 게시물이 없습니다.</span>   
     </div>`
