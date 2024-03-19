@@ -19,6 +19,13 @@ searchBtn.addEventListener("click", () => {
     console.log(searchValue)
     getData(searchValue)
 })
+// 엔터키 조회 기능
+searchInput.addEventListener("keydown", (event) => {
+    if (event.keyCode === 13) {
+        console.log(searchValue)
+        getData(searchValue)
+    }
+})
 
 // ----------------------------------------------------------------------------------------------------
 
