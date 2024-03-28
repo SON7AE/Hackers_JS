@@ -1,0 +1,87 @@
+/* 카운트다운 UI */
+.page__countDown {
+    position: absolute;
+    bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 75%;
+    padding: 20px 24px;
+
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* 왼쪽 레이아웃 */
+.page__countDown__infoBox {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+.title {
+    font-size: 22px;
+    font-weight: 900;
+}
+.countDownDesc {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* 오른쪽 레이아웃 */
+.page__countDown__countDownBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.countDown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.countDown__layout {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+.countDown__layout__text {
+    font-weight: 700;
+    font-size: 20px;
+
+    margin: 0 4px;
+}
+.countDown__layout__time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 64px;
+    min-height: 64px;
+
+    border-radius: 10px;
+    background-color: black;
+
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+}
+.countDown__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px 24px;
+    margin-left: 64px;
+
+    outline: none;
+    border: none;
+    background-color: #ffc738;
+    border-radius: 10px;
+
+    font-weight: 700;
+    font-size: 18px;
+
+    cursor: pointer;
+}
