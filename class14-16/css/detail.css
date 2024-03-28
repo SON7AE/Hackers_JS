@@ -1,5 +1,5 @@
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 
     margin: 0;
     padding: 0;
@@ -16,7 +16,7 @@
     width: 100%;
     height: 100vh;
 
-    background-image: url('../assets/images/image-02.jpg');
+    background-image: url("../assets/images/image-02.jpg");
     background-size: cover;
 }
 /* 디테일 페이지 헤더 */
@@ -210,4 +210,168 @@
     font-size: 18px;
 
     cursor: pointer;
+}
+
+/* 아이콘 클릭 시, 발생하는 다이얼로그 */
+.page__dialog {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.75);
+}
+.page__dialog__layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 65%;
+    height: 60%;
+
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 8px;
+}
+.section-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 30%;
+    height: 100%;
+}
+.section-left__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: calc(100% - 24px);
+    height: 10%;
+
+    padding-left: 24px;
+    gap: 12px;
+}
+.section-left__header__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+
+    /* background-color: #ffffff; */
+}
+.section-left__header__button.red {
+    background-color: red;
+}
+.section-left__header__button.yellow {
+    background-color: yellow;
+}
+.section-left__header__button.green {
+    background-color: green;
+}
+
+.section-left__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+    height: 90%;
+
+    /* background-color: floralwhite; */
+}
+.section-left__body__intro,
+.section-left__body__stackBox {
+    display: flex;
+    flex-direction: column;
+
+    width: calc(100% - 48px);
+
+    padding: 24px;
+
+    gap: 12px;
+}
+.label {
+    color: #ffffff;
+}
+.desc {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+
+    padding: 8px 12px;
+
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    width: 100%;
+
+    padding: 8px 0px;
+    gap: 12px;
+}
+.stack__row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+
+    gap: 8px;
+}
+.stack__row__dot {
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+}
+.stack__row__label {
+    color: white;
+}
+.stack__row__dot.pink {
+    background-color: pink;
+}
+.stack__row__dot.red {
+    background-color: red;
+}
+.stack__row__dot.yellow {
+    background-color: yellow;
+}
+.stack__row__dot.green {
+    background-color: green;
+}
+.stack__row__dot.blue {
+    background-color: skyblue;
+}
+
+/* 다이얼로그 오른쪽 레이아웃 */
+.section-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 70%;
+    height: 100%;
+
+    padding: 16px 12px;
 }
