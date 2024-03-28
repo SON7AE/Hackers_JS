@@ -18,7 +18,6 @@
     width: calc(100% - 24px);
     height: calc(100% - 32px);
 
-    background-color: whitesmoke;
     border-radius: 8px;
 }
 .section-right__content__container {
@@ -30,14 +29,14 @@
     width: 100%;
     height: 100%;
 
-    gap: 12px;
+    gap: 8px;
 }
 .searchBar {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    width: 320px;
+    width: 280px;
     padding: 10px 12px;
 
     background-color: #ffffff;
@@ -83,15 +82,11 @@
     display: flex;
     flex-direction: column;
 
-    width: 320px;
-    min-width: 320px;
+    width: 280px;
+    min-width: 280px;
 
     background-color: #ffffff;
-    border-radius: 6px;
-
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
-    border-radius: 16px;
-    border: 0.5px solid #cacaca;
+    border-radius: 8px;
 }
 .album__image {
     display: flex;
@@ -99,10 +94,9 @@
     justify-content: center;
 
     width: 100%;
-    height: 300px;
+    height: 232px;
 
-    background-color: #f6f6f6;
-    border-radius: 6px 6px 0 0;
+    border-radius: 8px 8px 0 0;
 }
 .album__infoBox {
     display: flex;
@@ -113,7 +107,7 @@
     padding: 20px 24px;
     gap: 12px;
 
-    border-radius: 0 0 6px 6px;
+    border-radius: 0 0 8px 8px;
 }
 .album__infoBox__row {
     display: flex;
@@ -122,7 +116,7 @@
 
     gap: 24px;
 }
-.label {
+.albumLabel {
     display: flex;
     align-items: center;
 
@@ -130,6 +124,7 @@
 
     font-weight: 500;
     font-size: 15px;
+    color: #000000;
 }
 .value {
     font-weight: 400;
@@ -139,15 +134,14 @@
 /* -------------------------------------------------- */
 
 swiper-container {
-    width: 100%;
-    max-width: 50%;
+    width: 90%;
+    max-width: 90%;
     height: 100%;
 }
 
 swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: whitesmoke;
 
     display: flex;
     justify-content: center;
@@ -162,5 +156,5 @@ swiper-slide img {
 
     object-fit: cover;
 
-    border-radius: 6px 6px 0 0;
+    border-radius: 8px 8px 0 0;
 }
