@@ -25,6 +25,7 @@ const user2 = {
     name: '이아무개',
     declare: user1.declare,
     express: user1.express,
+
     test: function () {
         const test2 = () => {
             console.log(this.name)
