@@ -18,9 +18,9 @@ class User {
     }
 }
 
-const user4 = new User('김아무개', 30) // 생성자 함수
-const user5 = new User('이아무개', 29) // 생성자 함수
-const user6 = new User('박아무개', 28) // 생성자 함수
+const user4 = new User("김아무개", 30) // 생성자 함수
+const user5 = new User("이아무개", 29) // 생성자 함수
+const user6 = new User("박아무개", 28) // 생성자 함수
 
 console.log(user4.getData()) // getData 프로토타입 참조
 console.log(user5)
@@ -35,7 +35,7 @@ class Person {
         this.age = age
     }
 }
-const user7 = new Person('김아무개', 30)
+const user7 = new Person("김아무개", 30)
 console.log(user7)
 
 class Person2 extends Person {
@@ -43,13 +43,13 @@ class Person2 extends Person {
         super(name, age) // super라는 키워드가 Person 클래스를 그대로 상속해서 사용할 수 있게끔 한다.
     }
 }
-const user8 = new Person2('이아무개', 29)
+const user8 = new Person2("이아무개", 29)
 console.log(user8)
 
 // ----------------------------------------------------------------------------------------------------
 
-const user9 = new Person2('박아무개', 28)
-const user10 = new Person2('송아무개', 27)
+const user9 = new Person2("박아무개", 28)
+const user10 = new Person2("송아무개", 27)
 
 class UserData extends Person {
     constructor(name, age, major) {
@@ -58,8 +58,8 @@ class UserData extends Person {
     }
 }
 
-const user11 = new UserData('그룹', 26, 'React')
-const user12 = new UserData('그룹', 26, 'Vue.js')
+const user11 = new UserData("그룹", 26, "React")
+const user12 = new UserData("그룹", 26, "Vue.js")
 
 console.log(user11)
 console.log(user12)

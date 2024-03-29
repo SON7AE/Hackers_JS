@@ -32,8 +32,6 @@ async function getData(inputValue) {
     // call unsplash api
     try {
         const res = await axios.get(`${API_URL}?query=${inputValue}&client_id=${API_KEY}&page=${pageValue}&per_page=${PER_PAGE}`)
-
-        console.log(res.data.results[0])
         res.data.results.forEach((image) => {
             dataBoxEl.innerHTML += `<swiper-slide>
                 <div class="album">

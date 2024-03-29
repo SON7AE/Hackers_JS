@@ -4,10 +4,10 @@
 
 // 화살표함수는 자신이 선언된 함수 범위에서 this를 정의
 
-const name = '박아무개'
+const name = "박아무개"
 
 const user1 = {
-    name: '김아무개',
+    name: "김아무개",
     declare: function () {
         console.log(this.name)
     },
@@ -22,7 +22,7 @@ user1.express() // undefined
 // ------------------------------------------------------------------------------------------
 
 const user2 = {
-    name: '이아무개',
+    name: "이아무개",
     declare: user1.declare,
     express: user1.express,
 
@@ -52,14 +52,14 @@ User.prototype.express = () => {
     console.log(this.name)
 }
 
-const user3 = new User('박아무개')
+const user3 = new User("박아무개")
 user3.declare() // "박아무개"
 user3.express() // undefined
 
 // ------------------------------------------------------------------------------------------
 
 const timer = {
-    name: '최아무개',
+    name: "최아무개",
     timeout1: function () {
         setTimeout(function () {
             console.log(this.name)
